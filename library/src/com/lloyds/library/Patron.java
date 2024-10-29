@@ -22,7 +22,6 @@ public class Patron {
     public void borrowBook(Book book) {
         book.setAvailable(false);
         booksBorrowed.add(book);
-        System.out.println(booksBorrowed);
     }
 
     public void returnBook(Book book) {
