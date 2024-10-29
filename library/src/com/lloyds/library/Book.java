@@ -5,12 +5,14 @@ public class Book {
     private String author;
     private String genre;
     private int ISBN;
+    private boolean isAvailable;
 
     public Book(String title, String author, String genre, int ISBN) {
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.ISBN = ISBN;
+        this.isAvailable = true;
     }
 
     public String getTitle() {
@@ -43,6 +45,14 @@ public class Book {
 
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
     }
 
     @Override

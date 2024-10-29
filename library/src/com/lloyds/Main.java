@@ -1,6 +1,7 @@
 package com.lloyds;
 
 import com.lloyds.library.Book;
+import com.lloyds.library.Library;
 import com.lloyds.library.Patron;
 
 public class Main {
@@ -12,6 +13,13 @@ public class Main {
         Patron patron = new Patron("Keeley", "Gardner", "email@email.com");
         patron.borrowBook(book1);
 
+        Library library = new Library();
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+
+        System.out.println(library.searchByISBN(76812098));
+        System.out.println(library.searchByAuthor("Suzanne collins"));
     }
 
 
